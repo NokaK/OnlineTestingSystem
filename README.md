@@ -1,10 +1,16 @@
 ონლაინ ტესტების სისტემის ჩაშენება UniLab-ის მართვის აპლიკაციაში
 
-Branch Structure main branch: development test branch: pre-development
+Branch Structure 
+
+main branch: development 
+test branch: pre-development
 
 development - stable branch pre-development - working branch
 
-pull request All the pull requests create from pre-development and send pull requests on the same branch.
+
+pull request 
+
+All the pull requests create from pre-development and send pull requests on the same branch.
 
 When creating new branch, always use the structure of the branch anatomy.
 
