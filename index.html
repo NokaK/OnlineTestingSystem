@@ -12,22 +12,26 @@
 </head>
 <body>
     <button>ბანკის შექმნა</button>
-    <div class="inputs">
-        <label for="name"></label>
-        <input type="text" name="subject" id="subject" class="form-input" placeholder="სახელი" required>
-
-        <label for="Surname"></label>
-        <input type="text" name="Name/Surname" id="Name/Surname" class="form-input" placeholder="გვარი" required>
-
-        <label for="number"></label>
-        <input type="text" name="number" id="number" class="form-input" placeholder="პირადი ნომერი" required>
-
-        <label for="email"></label>
-        <input type="email" name="email" id="email" class="form-input" placeholder="ელფოსტა" required>
-        
-        <label for="number"></label>
-        <input type="text" name="number" id="number" class="form-input" placeholder="ტელეფონის ნომერი" required>
-        
+    <form class="inputs">
+        <div>
+            <label for="username">სახელი</label>
+            <input type="text" name="username" id="username" class="form-input" placeholder="" required>
+        </div>
+        <div>
+            <label for="username">გვარი</label>
+            <input type="text" name="username" id="username" class="form-input" placeholder="" required>
+        </div>
+        <div>
+            <label for="number">პირადი ნომერი</label>
+            <input type="number" name="number" id="number" class="form-input" placeholder="">
+        </div>
+        <div>
+            <label for="email">ელფოსტა</label>
+            <input type="email" name="email" id="email" class="form-input" placeholder="" readonly>
+        </div>
+            <label for="number">ტელეფონის ნომერი</label>
+            <input type="number" name="number" id="number" class="form-input" placeholder="">
+    </form>    
     <!-- Additional questions -->
     <div class="quest_container">
         <h5 class="quest_title">დამატებითი კითხვები</h5>
