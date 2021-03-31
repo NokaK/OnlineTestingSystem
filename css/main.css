@@ -25,6 +25,15 @@
 /*------------------------------------*\
   #Lecturer page
 \*------------------------------------*/
+.inputs{
+  display: flex;
+  flex-direction: column;
+  width: 50%;
+}
+.form-input{
+  margin: 20px 0;
+  outline: none;
+}
 
 /*Additional questions*/
 .quest_container .main_form, h5{
