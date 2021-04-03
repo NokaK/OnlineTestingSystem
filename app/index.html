@@ -3,11 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./css/Reset.css">
-    <link rel="stylesheet" href="./css/Fonts.css">
-    <link rel="stylesheet" href="./css/main.css">
-    <link rel="stylesheet" href="./css/Responsive.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">\
+    <link rel="stylesheet" href="./css/main.min.css">
     <title>Online Test</title>
 </head>
 <body>
@@ -47,16 +44,18 @@
                 <input type="text" id="#" name="name" placeholder="თქვენი პოზიცია"><br>
                 <label for="lname"></label><br>
                 <label class="job_checkbox_label">
-                    <input type="checkbox">
+                    <input type="checkbox" id="working_now">
                     მოცემულ მომეტში ვმუშაობ აღნიშნულ ორგანიზაციაში
-                </label>
-                <label for="name"></label><br>
-                <input type="text" id="#" name="name" placeholder="დაწყების თარიღი"><br>
-                <label for="name"></label><br>
-                <input type="text" id="#" name="name" placeholder="დასრულების დარიღი"><br>
+                </label><br>
+                <label for="start">დაწყების თარიღი:</label><br>
+                <input type="date" id="start_day" name="start_date" min="2018-01-01" required>
+                <div id="end_date" class="">
+                    <label for="end">დასრულების თარიღი:</label><br>
+                    <input type="date" id="end_day" name="end_date" min="2018-01-01" required>
+                </div>
             </form> 
         </div>
     </div>
-    <script src="./main.js"></script>
+    <script src="./js/main.js"></script>
 </body>
 </html>
