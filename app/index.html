@@ -8,8 +8,12 @@
     <title>Online Test</title>
 </head>
 <body>
+    <h1>ლექტორის გვერდი</h1>
     <button>ბანკის შექმნა</button>
     <form class="inputs">
+        <div>
+            <input type="text" name="username" id="username" class="test-name-input" placeholder="ტესტის სახელის ველი" required>
+        </div>
         <div>
             <input type="text" name="username" id="username" class="form-input" placeholder="სახელი" required>
         </div>
@@ -20,7 +24,7 @@
             <input type="number" name="number" id="number" class="form-input" placeholder="პირადი ნომერი">
         </div>
         <div>
-            <input type="email" name="email" id="email" class="form-input" placeholder="ელფოსტა" readonly>
+            <input type="email" name="email" id="email" class="form-input" placeholder="ელფოსტა">
         </div>
         <div>
             <input type="number" name="number" id="number" class="form-input" placeholder="ტელეფონის ნომერი">
@@ -30,32 +34,25 @@
     <div class="quest_container">
         <h5 class="quest_title">დამატებითი კითხვები</h5>
         <form class="main_form" action="/action_page.php">
-            <label class="appear_checkbox">გამოჩნდეს
+            <label class="appear_checkbox">
+                გამოჩნდეს
                 <input type="checkbox" id="qeust_checkbox" name="questions">
             </label>
         </form>
         <div id="quest_collapse" class="quest_none">
             <form class="quest_form" action="/action_page.php">
-                <label for="name"></label><br>
-                <input type="text" id="#" name="name" placeholder="სამუშაო გამოცდილება"><br>
-                <label for="name"></label><br>
-                <input type="text" id="#" name="name" placeholder="ორგანიზაციის სახელი"><br>
-                <label for="name"></label><br>
-                <input type="text" id="#" name="name" placeholder="თქვენი პოზიცია"><br>
-                <label for="lname"></label><br>
+                <input type="text" id="#" name="name" class="form-input" placeholder="სამუშაო გამოცდილება">
+                <input type="text" id="#" name="name" class="form-input" placeholder="ორგანიზაციის სახელი">
+                <input type="text" id="#" name="name" class="form-input" placeholder="თქვენი პოზიცია">
                 <label class="job_checkbox_label">
-                    <input type="checkbox" id="working_now">
+                    <input class="checkbox" type="checkbox">
                     მოცემულ მომეტში ვმუშაობ აღნიშნულ ორგანიზაციაში
-                </label><br>
-                <label for="start">დაწყების თარიღი:</label><br>
-                <input type="date" id="start_day" name="start_date" min="2018-01-01" required>
-                <div id="end_date" class="">
-                    <label for="end">დასრულების თარიღი:</label><br>
-                    <input type="date" id="end_day" name="end_date" min="2018-01-01" required>
-                </div>
+                </label>
+                <input type="text" id="#" name="name" class="form-input"  placeholder="დაწყების თარიღი">
+                <input type="text" id="#" name="name" class="form-input"  placeholder="დასრულების დარიღი">
             </form> 
         </div>
     </div>
-    <script src="./js/main.js"></script>
+    <script src="./main.js"></script>
 </body>
 </html>
