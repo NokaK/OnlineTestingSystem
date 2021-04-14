@@ -11,6 +11,6 @@ $('.add_questions').click(function() {
 });
 
 //Add answer
-$('.add_answer').click(function() {
-    $('.add_answer').after('<input class="answer" type="text" id="#" name="name" placeholder="პირველი პასუხის ველი"><br>')
-});
+// $('.add_answer').click(function() {
+//     $('.add_answer').after('<input class="answer" type="text" id="#" name="name" placeholder="პირველი პასუხის ველი"><br>')
+// });
