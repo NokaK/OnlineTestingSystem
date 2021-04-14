@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <link rel="stylesheet" href="./css/main.min.css">
     <title>Online Test</title>
 </head>
@@ -15,19 +16,19 @@
             <input type="text" name="username" id="username" class="test-name-input" placeholder="ტესტის სახელის ველი" required>
         </div>
         <div>
-            <input type="text" name="username" id="username" class="form-input" placeholder="სახელი" required>
+            <input type="text" name="username" id="username" class="form_input" placeholder="სახელი" required>
         </div>
         <div>
-            <input type="text" name="username" id="username" class="form-input" placeholder="გვარი" required>
+            <input type="text" name="username" id="username" class="form_input" placeholder="გვარი" required>
         </div>
         <div>
-            <input type="number" name="number" id="number" class="form-input" placeholder="პირადი ნომერი">
+            <input type="number" name="number" id="number" class="form_input" placeholder="პირადი ნომერი">
         </div>
         <div>
-            <input type="email" name="email" id="email" class="form-input" placeholder="ელფოსტა">
+            <input type="email" name="email" id="email" class="form_input" placeholder="ელფოსტა">
         </div>
         <div>
-            <input type="number" name="number" id="number" class="form-input" placeholder="ტელეფონის ნომერი">
+            <input type="number" name="number" id="number" class="form_input" placeholder="ტელეფონის ნომერი">
         </div>
     </form>    
     <!-- Additional questions -->
@@ -41,18 +42,34 @@
         </form>
         <div id="quest_collapse" class="quest_none">
             <form class="quest_form" action="/action_page.php">
-                <input type="text" id="#" name="name" class="form-input" placeholder="სამუშაო გამოცდილება">
-                <input type="text" id="#" name="name" class="form-input" placeholder="ორგანიზაციის სახელი">
-                <input type="text" id="#" name="name" class="form-input" placeholder="თქვენი პოზიცია">
+                <input type="text" id="#" name="name" class="form_input" placeholder="სამუშაო გამოცდილება">
+                <input type="text" id="#" name="name" class="form_input" placeholder="ორგანიზაციის სახელი">
+                <input type="text" id="#" name="name" class="form_input" placeholder="თქვენი პოზიცია">
                 <label class="job_checkbox_label">
-                    <input class="checkbox" type="checkbox">
+                    <input id="working_now" class="checkbox" type="checkbox">
                     მოცემულ მომეტში ვმუშაობ აღნიშნულ ორგანიზაციაში
                 </label>
-                <input type="text" id="#" name="name" class="form-input"  placeholder="დაწყების თარიღი">
-                <input type="text" id="#" name="name" class="form-input"  placeholder="დასრულების დარიღი">
+                <label for="start">დაწყების თარიღი:</label><br>
+                <input type="date" id="start_day" class="form_input" name="start_date" min="2018-01-01" required>
+                <div id="end_date" class="">
+                    <label for="end">დასრულების თარიღი:</label><br>
+                    <input type="date" id="end_day" class="form_input" name="end_date" min="2018-01-01" required>
+                </div>
             </form> 
         </div>
     </div>
-    <script src="./main.js"></script>
+    <div class="add_additional_question">
+        <input class="main_question" type="text" id="#" name="name" placeholder="კითვის მთავარი ველი (text)">
+        <input class="answer_type" type="text" id="#" name="name" placeholder="პასუხის ტიპის არჩევა">
+        <input class="answer" type="text" id="#" name="name" placeholder="პირველი პასუხის ველი"><br>
+        <button class="add_answer">ახალი პასუხის ველის დამატება</button>
+        <input type="submit" value="del">
+        <input type="submit" value="req">
+    </div>
+    <button class="add_questions">
+        <img class="plus_icon" src="./img/icons/plus-solid.svg">
+    </button>
+    <script src="./js/main.js"></script>
+    <script src="./js/jquery.js"></script>
 </body>
 </html>
