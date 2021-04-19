@@ -25,31 +25,27 @@
   #Lecturer page
 /*------------------------------------*/
 
-body
-  padding: 44px 55px
+.teacher
+  padding: 50px
 
 h1, h5, .appear_checkbox
   @include font-type(20px, san-serif, $text-color)
 
-button
+.btn
   margin: 75px 0 63px 0
   padding: 15px 25px
   @include font-type(20px, san-serif, $text-color)
-
-.inputs
-  @include flex
 
 .form_input, .job_checkbox_label
   margin: 9px 0
   outline: none
   width: 806px
-  padding: 12px 75px 25px 75px
+  padding: 12px 75px 25px 15px
   @include font-type(20px, san-serif, $text-color)
 
 .test-name-input
   width: 368px
-  padding: 12px 0 30px 0
-  text-align: center
+  padding: 12px 0 30px 15px
   outline: none
   margin-bottom: 37px
   @include font-type(20px, san-serif, $text-color)
@@ -69,10 +65,7 @@ button
 .main_form 
     margin-left: 170px
 
-.quest_none 
-    display: none
-
-.working_none 
+.disnone
   display: none
 
 .job_checkbox_label 
@@ -96,8 +89,44 @@ button
 /*------------------------------------*\
   #Student page
 /*------------------------------------*/
+.content
+  margin: 30px auto
+  display: table
+
+.left_side_content
+  float: left
+
+.right_side_content
+  float: right
+
+.sturdent_form
+  content: ""
+  clear: both
+  display: table
+
+.send_btn
+    margin: 190px auto;
+    display: block;
 
 
 /*------------------------------------*\
   #Registration
 /*------------------------------------*/
+.register-container
+  position: relative
+  width: 100vw
+  height: 100vh
+
+  form
+    position: absolute
+    top: 50%
+    left: 50%
+    transform: translate(-50%, -50%)
+
+    .registerbtn, .reg-input
+      margin: 10px
+      width: 367px
+      height: 65px
+      outline: none
+      @include font-type(20px, san-serif, $text-color)
+

@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/main.min.css">
+    <title>Online Test</title>
+</head>
+<body>
+    <h1>სტუდნეტის გვერდი</h1>
+    <div class="content">
+        <p>ტესტის სახელი</p>
+        <form class="sturdent_form">
+            <div>
+                <label for="name">სახელი</label><br>
+                <input type="text" name="username" id="username" class="form_input" required>
+            </div>
+            <div>
+                <label for="Fullname">გვარი</label><br>
+                <input type="text" name="username" id="username" class="form_input" required>
+            </div>
+            <div>
+                <label for="IDnum">პირადი ნომერი</label><br>
+                <input type="number" name="number" id="number" class="form_input">
+            </div>
+            <div>
+                <label for="email">ელ ფოსტა</label><br>
+                <input type="email" name="email" id="email" class="form_input">
+            </div>
+            <div>
+                <label for="number">ტელეფონის ნომერი</label><br>
+                <input type="number" name="number" id="number" class="form_input">
+            </div>
+            <div>
+                <label for="Work-experience">სამუშაო გამოცდილება</label><br>
+                <input type="text" name="username" id="username" class="form_input" required>
+            </div>
+            <div>
+                <label for="Org-name">ორგანიზაციის სახელი</label><br>
+                <input type="text" name="username" id="username" class="form_input" required>
+            </div>
+            <div>
+                <label for="pos">თქვენი პოზიცია</label><br>
+                <input type="text" name="username" id="username" class="form_input" required>
+            </div>
+            <label class="job_checkbox_label">
+                <input id="working_now" class="checkbox" type="checkbox">
+                მოცემულ მომეტში ვმუშაობ აღნიშნულ ორგანიზაციაში
+            </label>
+            <label for="start">დაწყების თარიღი:</label><br>
+            <input type="date" id="start_day" class="form_input" name="start_date" min="2018-01-01" required>
+            <div id="end_date" class="">
+                <label for="end">დასრულების თარიღი:</label><br>
+                <input type="date" id="end_day" class="form_input" name="end_date" min="2018-01-01" required>
+            </div>
+            <div class="add_work_experience btn">
+                <p>სამუშაო გამოცდილების დამატება</p>
+                <img class="plus_icon" src="./img/icons/plus-solid.svg" alt="plus">
+            </div>
+            <div>
+                <label for="psw">ტექტუალური კითხვა</label><br>
+                <input type="text" name="username" id="username" class="form_input" required>
+            </div>
+            <div class="left_side_content">
+                <p>ერთ ერთ სწორი პასუხი</p>
+                <input type="radio" id="age1" name="age" value="30">
+                <label for="age1">კი</label><br>
+                <input type="radio" id="age2" name="age" value="60">
+                <label for="age2">არა</label><br>
+                <p>ერთ ერთ სწორი პასუხი</p>
+                <input type="checkbox" id="vehicle1" name="vehicle1" value="Bike">
+                <label for="vehicle1">1</label><br>
+                <input type="checkbox" id="vehicle2" name="vehicle2" value="Car">
+                <label for="vehicle2">2</label><br>
+                <input type="checkbox" id="vehicle3" name="vehicle3" value="Boat">
+                <label for="vehicle3">3</label><br><br>
+                <input type="checkbox" id="vehicle3" name="vehicle3" value="Boat">
+                <label for="vehicle3">4</label><br><br>
+            </div>
+            <div class="right_side_content">
+                <div>
+                    <a href="#">
+                        <p>მიმაგრებული ფაილის ნახვა</p>
+                    </a>
+                    <a href="#">
+                        <p>მიმაგრებული ფაილის ნახვა</p>
+                    </a>
+                </div>
+                <div>
+                    <a href="#">
+                        <p>მიმაგრებული ფაილის ნახვა</p>
+                    </a>
+                    <a href="#">
+                        <p>მიმაგრებული ფაილის ნახვა</p>
+                    </a>
+                </div>
+            </div>
+            <input class="send_btn" type="submit" value="გაგზავნა">
+        </form>
+    </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="./js/jquery.js"></script>
+</body>
+</html>
