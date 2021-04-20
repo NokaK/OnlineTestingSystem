@@ -6,7 +6,7 @@ const rename = require('gulp-rename');
 
 // function
 function compilesass() {
-    return src('./app/sass/main.sass')
+    return src('./sass/main.sass')
         .pipe(sass())
         .pipe(prefix())
         .pipe(minfy())
@@ -17,12 +17,12 @@ function compilesass() {
                 extname: ".css"
             };
         }))
-    .pipe(dest('./app/css'))
+    .pipe(dest('./css'))
 };
 
 // watchtask
 function watchTask(){
-    watch('./app/sass/**/*.sass', compilesass)
+    watch('./sass/**/*.sass', compilesass)
 }
 
 // default gulp

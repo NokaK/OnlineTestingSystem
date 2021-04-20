@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/main.min.css">
+    <title>Online Test</title>
+</head>
+<body class="teacher">
+    <h1>ლექტორის გვერდი</h1>
+    <button class="btn">ბანკის შექმნა</button>
+    <form class="inputs">
+        <div>
+            <input type="text" name="username" id="test_name" class="test-name-input" placeholder="ტესტის სახელის ველი" required>
+        </div>
+        <div>
+            <input type="text" name="username" id="name" class="form_input" placeholder="სახელი" required>
+        </div>
+        <div>
+            <input type="text" name="username" id="fulname" class="form_input" placeholder="გვარი" required>
+        </div>
+        <div>
+            <input type="number" name="number" id="id_number" class="form_input" placeholder="პირადი ნომერი">
+        </div>
+        <div>
+            <input type="email" name="email" id="email" class="form_input" placeholder="ელფოსტა">
+        </div>
+        <div>
+            <input type="number" name="number" id="mobile_number" class="form_input" placeholder="ტელეფონის ნომერი">
+        </div>
+    </form>    
+    <!-- Additional questions -->
+    <div class="quest_container">
+        <h5 class="quest_title">დამატებითი კითხვები</h5>
+        <form class="main_form" action="/action_page.php">
+            <label class="appear_checkbox">
+                გამოჩნდეს
+                <input type="checkbox" id="qeust_checkbox" name="questions">
+            </label>
+        </form>
+        <div id="quest_collapse" class="disnone">
+            <form class="quest_form" action="/action_page.php">
+                <input type="text" name="name" class="form_input" placeholder="სამუშაო გამოცდილება">
+                <input type="text" name="name" class="form_input" placeholder="ორგანიზაციის სახელი">
+                <input type="text" name="name" class="form_input" placeholder="თქვენი პოზიცია">
+                <label class="job_checkbox_label">
+                    <input id="working_now" class="checkbox" type="checkbox">
+                    მოცემულ მომეტში ვმუშაობ აღნიშნულ ორგანიზაციაში
+                </label>
+                <label for="start">დაწყების თარიღი:</label><br>
+                <input type="date" id="start_day" class="form_input" name="start_date" min="2018-01-01" required>
+                <div id="end_date" class="">
+                    <label for="end">დასრულების თარიღი:</label><br>
+                    <input type="date" id="end_day" class="form_input" name="end_date" min="2018-01-01" required>
+                </div>
+            </form> 
+        </div>
+    </div>
+    <div class="add_additional_question">
+        <input class="main_question" type="text" name="name" placeholder="კითვის მთავარი ველი (text)">
+        <input class="answer_type" type="text"  name="name" placeholder="პასუხის ტიპის არჩევა">
+        <input class="answer" type="text" id="answer_1" name="name" placeholder="პირველი პასუხის ველი"><br>
+        <button class="add_answer btn">ახალი პასუხის ველის დამატება</button>
+        <input type="submit" value="del">
+        <input type="submit" value="req">
+    </div>
+    <button class="add_questions btn">
+        <img class="plus_icon" src="./img/icons/plus-solid.svg" alt="plus">
+    </button>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="./js/jquery.js"></script>
+</body>
+</html>
