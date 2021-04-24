@@ -11,88 +11,110 @@
     <h1>სტუდნეტის გვერდი</h1>
     <div class="content">
         <p>ტესტის სახელი</p>
-        <form class="sturdent_form">
-            <div>
-                <label for="name">სახელი</label><br>
+        <form class="student_form">
+            <div class="content-box">
+                <label for="name">სახელი</label>
                 <input type="text" name="username" id="username" class="form_input" required>
             </div>
-            <div>
-                <label for="Fullname">გვარი</label><br>
+            <div class="content-box">
+                <label for="Fullname">გვარი</label>
                 <input type="text" name="username" id="username" class="form_input" required>
             </div>
-            <div>
-                <label for="IDnum">პირადი ნომერი</label><br>
+            <div class="content-box">
+                <label for="IDnum">პირადი ნომერი</label>
                 <input type="number" name="number" id="number" class="form_input">
-            </div>
-            <div>
-                <label for="email">ელ ფოსტა</label><br>
+            </div class="content-box">
+            <div class="content-box">
+                <label for="email">ელ ფოსტა</label>
                 <input type="email" name="email" id="email" class="form_input">
             </div>
-            <div>
-                <label for="number">ტელეფონის ნომერი</label><br>
+            <div class="content-box">
+                <label for="number">ტელეფონის ნომერი</label>
                 <input type="number" name="number" id="number" class="form_input">
             </div>
-            <div>
-                <label for="Work-experience">სამუშაო გამოცდილება</label><br>
+            <div class="content-box">
+                <label for="Work-experience">სამუშაო გამოცდილება</label>
                 <input type="text" name="username" id="username" class="form_input" required>
             </div>
-            <div>
-                <label for="Org-name">ორგანიზაციის სახელი</label><br>
+            <div class="content-box">
+                <label for="Org-name">ორგანიზაციის სახელი</label>
                 <input type="text" name="username" id="username" class="form_input" required>
             </div>
-            <div>
-                <label for="pos">თქვენი პოზიცია</label><br>
+            <div class="content-box">
+                <label for="pos">თქვენი პოზიცია</label>
                 <input type="text" name="username" id="username" class="form_input" required>
             </div>
-            <label class="job_checkbox_label">
-                <input id="working_now" class="checkbox" type="checkbox">
-                მოცემულ მომეტში ვმუშაობ აღნიშნულ ორგანიზაციაში
-            </label>
-            <label for="start">დაწყების თარიღი:</label><br>
-            <input type="date" id="start_day" class="form_input" name="start_date" min="2018-01-01" required>
-            <div id="end_date" class="">
-                <label for="end">დასრულების თარიღი:</label><br>
-                <input type="date" id="end_day" class="form_input" name="end_date" min="2018-01-01" required>
+            <div class="job_checkbox_label">
+                <label>
+                    <input class="working_now checkbox" type="checkbox">
+                    მოცემულ მომეტში ვმუშაობ აღნიშნულ ორგანიზაციაში
+                    <div class="content-box">
+                        <label for="start">დაწყების თარიღი:</label>
+                        <input type="date" id="start_day" class="start_day form_input" name="start_day" min="2018-01-01" required>
+                    </div>
+                    <div class="end_date content-box">
+                        <label for="end">დასრულების თარიღი:</label>
+                        <input type="date" id="end_day" class="end_day form_input" name="end_day" min="2018-01-01" required>
+                    </div>
+                </label>
             </div>
             <div class="add_work_experience btn">
                 <p>სამუშაო გამოცდილების დამატება</p>
                 <img class="plus_icon" src="./img/icons/plus-solid.svg" alt="plus">
             </div>
-            <div>
-                <label for="psw">ტექტუალური კითხვა</label><br>
-                <input type="text" name="username" id="username" class="form_input" required>
+            <div class="content-box">
+                <label for="psw">ტექტუალური კითხვა</label>
+                <textarea class="form_input">
+                </textarea>
             </div>
             <div class="left_side_content">
-                <p>ერთ ერთ სწორი პასუხი</p>
-                <input type="radio" id="age1" name="age" value="30">
-                <label for="age1">კი</label><br>
-                <input type="radio" id="age2" name="age" value="60">
-                <label for="age2">არა</label><br>
-                <p>ერთ ერთ სწორი პასუხი</p>
-                <input type="checkbox" id="vehicle1" name="vehicle1" value="Bike">
-                <label for="vehicle1">1</label><br>
-                <input type="checkbox" id="vehicle2" name="vehicle2" value="Car">
-                <label for="vehicle2">2</label><br>
-                <input type="checkbox" id="vehicle3" name="vehicle3" value="Boat">
-                <label for="vehicle3">3</label><br><br>
-                <input type="checkbox" id="vehicle3" name="vehicle3" value="Boat">
-                <label for="vehicle3">4</label><br><br>
+                <div>
+                    <p>ერთ ერთ სწორი პასუხი</p>
+                    <div class="radio-box">
+                        <input type="radio" name="l" value="yes">
+                        <label for="answer">კი</label>
+                    </div>
+                    <div class="radio-box">
+                        <input type="radio" name="l" value="no">
+                        <label for="answer">არა</label>
+                    </div>
+                </div>
+                <div>
+                    <p>ერთ ერთ სწორი პასუხი</p>
+                    <div class="checkbox-box">
+                        <input type="checkbox" value="ans1">
+                        <label for="vehicle1">1</label>
+                    </div>
+                    <div class="checkbox-box">
+                        <input type="checkbox" id="vehicle2" value="ans2">
+                        <label for="vehicle2">2</label>
+                    </div>
+                    <div class="checkbox-box">
+                        <input type="checkbox" id="vehicle3" value="ans3">
+                        <label for="vehicle3">3</label>
+                    </div>
+                    <div class="checkbox-box">
+                        <input type="checkbox" id="vehicle3" value="ans4">
+                        <label for="vehicle3">4</label>
+                    </div>
+                </div>
+                
             </div>
             <div class="right_side_content">
                 <div>
                     <a href="#">
                         <p>მიმაგრებული ფაილის ნახვა</p>
                     </a>
-                    <a href="#">
-                        <p>მიმაგრებული ფაილის ნახვა</p>
+                    <a href="#" target="_blank">
+                        <p>მიმაგრებული ლინკის ნახვა</p>
                     </a>
                 </div>
                 <div>
                     <a href="#">
                         <p>მიმაგრებული ფაილის ნახვა</p>
                     </a>
-                    <a href="#">
-                        <p>მიმაგრებული ფაილის ნახვა</p>
+                    <a href="#" target="_blank">
+                        <p>მიმაგრებული ლინკის ნახვა</p>
                     </a>
                 </div>
             </div>
