@@ -10,15 +10,15 @@
 <body class="teacher">
     <h1>ლექტორის გვერდი</h1>
     <button id="teacher_bank" class="btn">ბანკის შექმნა</button>
-    <form id="teacher_form" class="disnone">
+    <form class="disnone">
         <div>
-            <input type="text" name="username" id="test_name" class="test-name-input" placeholder="ტესტის სახელის ველი" required>
+            <input type="text" name="testname" id="test_name" class="test-name-input" placeholder="ტესტის სახელის ველი">
         </div>
         <div>
-            <input type="text" name="username" id="name" class="form_input" placeholder="სახელი" required>
+            <input type="text" name="username" id="name" class="form_input" placeholder="სახელი">
         </div>
         <div>
-            <input type="text" name="username" id="fulname" class="form_input" placeholder="გვარი" required>
+            <input type="text" name="lname" id="lname" class="form_input" placeholder="გვარი">
         </div>
         <div>
             <input type="number" name="number" id="id_number" class="form_input" placeholder="პირადი ნომერი">
@@ -27,7 +27,7 @@
             <input type="email" name="email" id="email" class="form_input" placeholder="ელფოსტა">
         </div>
         <div>
-            <input type="number" name="number" id="mobile_number" class="form_input" placeholder="ტელეფონის ნომერი">
+            <input type="number" name="mobnumber" id="mobile_number" class="form_input" placeholder="ტელეფონის ნომერი">
         </div>
         <!-- Additional questions -->
         <div class="quest_container">
@@ -40,18 +40,22 @@
             </div>
             <div id="quest_collapse" class="disnone">
                 <div class="quest_form" action="/action_page.php">
-                    <input type="text" name="name" class="form_input" placeholder="სამუშაო გამოცდილება">
-                    <input type="text" name="name" class="form_input" placeholder="ორგანიზაციის სახელი">
-                    <input type="text" name="name" class="form_input" placeholder="თქვენი პოზიცია">
-                    <label class="job_checkbox_label">
-                        <input id="working_now" class="checkbox" type="checkbox">
-                        მოცემულ მომეტში ვმუშაობ აღნიშნულ ორგანიზაციაში
-                    </label>
-                    <label for="start">დაწყების თარიღი:</label><br>
-                    <input type="date" id="start_day" class="form_input" name="start_date" min="2018-01-01" required>
-                    <div id="end_date" class="">
-                        <label for="end">დასრულების თარიღი:</label><br>
-                        <input type="date" id="end_day" class="form_input" name="end_date" min="2018-01-01" required>
+                    <input type="text" name="work-exp" class="form_input workexp-valid" placeholder="სამუშაო გამოცდილება">
+                    <input type="text" name="org-name" class="form_input workexp-valid" placeholder="ორგანიზაციის სახელი">
+                    <input type="text" name="position" class="form_input workexp-valid" placeholder="თქვენი პოზიცია">
+                    <div class="job_checkbox_label">
+                        <label>
+                            <input class="working_now checkbox" type="checkbox">
+                            მოცემულ მომეტში ვმუშაობ აღნიშნულ ორგანიზაციაში
+                            <div class="content-box">
+                                <label for="start">დაწყების თარიღი:</label>
+                                <input type="date" id="start_day" class="form_input date-valid" name="start_day">
+                            </div>
+                            <div class="end_date content-box">
+                                <label for="end">დასრულების თარიღი:</label>
+                                <input type="date" id="end_day" class="form_input date-valid" name="end_day">
+                            </div>
+                        </label>
                     </div>
                 </div> 
             </div>
@@ -69,6 +73,8 @@
         </button>
     </form>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/jquery-validation@1.19.3/dist/jquery.validate.js"></script>
     <script src="./js/jquery.js"></script>
+    <script src="./js/validaition.js"></script>
 </body>
 </html>

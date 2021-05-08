@@ -11,38 +11,38 @@
     <h1>სტუდნეტის გვერდი</h1>
     <div class="content">
         <p>ტესტის სახელი</p>
-        <form class="student_form">
-            <div class="content-box">
+        <form>
+            <div id="name" class="content-box">
                 <label for="name">სახელი</label>
-                <input type="text" name="username" id="username" class="form_input" required>
+                <input type="text" name="username" id="username" class="form_input">
             </div>
-            <div class="content-box">
-                <label for="Fullname">გვარი</label>
-                <input type="text" name="username" id="username" class="form_input" required>
+            <div id="fullname" class="content-box">
+                <label for="lname">გვარი</label>
+                <input type="text" name="lname" id="lname" class="form_input" >
             </div>
-            <div class="content-box">
+            <div id="id_num" class="content-box">
                 <label for="IDnum">პირადი ნომერი</label>
                 <input type="number" name="number" id="number" class="form_input">
-            </div class="content-box">
-            <div class="content-box">
+            </div>
+            <div id="email" class="content-box">
                 <label for="email">ელ ფოსტა</label>
                 <input type="email" name="email" id="email" class="form_input">
             </div>
-            <div class="content-box">
-                <label for="number">ტელეფონის ნომერი</label>
-                <input type="number" name="number" id="number" class="form_input">
+            <div id="mob_num" class="content-box">
+                <label for="mobnumber">ტელეფონის ნომერი</label>
+                <input type="number" name="mobnumber" id="mnumber" class="form_input">
             </div>
-            <div class="content-box">
+            <div id="work_exp_cont" class="content-box">
                 <label for="Work-experience">სამუშაო გამოცდილება</label>
-                <input type="text" name="username" id="username" class="form_input" required>
+                <input type="text" name="work-exp id="work-exp" class="form_input workexp-valid">
             </div>
-            <div class="content-box">
-                <label for="Org-name">ორგანიზაციის სახელი</label>
-                <input type="text" name="username" id="username" class="form_input" required>
+            <div id="org-name_cont" class="content-box">
+                <label for="org-name-cont">ორგანიზაციის სახელი</label>
+                <input type="text" name="org-name" id="org-name" class="form_input workexp-valid">
             </div>
-            <div class="content-box">
+            <div id="position-cont" class="content-box">
                 <label for="pos">თქვენი პოზიცია</label>
-                <input type="text" name="username" id="username" class="form_input" required>
+                <input type="text" name="position" id="position" class="form_input workexp-valid">
             </div>
             <div class="job_checkbox_label">
                 <label>
@@ -50,11 +50,11 @@
                     მოცემულ მომეტში ვმუშაობ აღნიშნულ ორგანიზაციაში
                     <div class="content-box">
                         <label for="start">დაწყების თარიღი:</label>
-                        <input type="date" id="start_day" class="start_day form_input" name="start_day" min="2018-01-01" required>
+                        <input type="date" id="start_day" class="form_input date-valid" name="start_day">
                     </div>
                     <div class="end_date content-box">
                         <label for="end">დასრულების თარიღი:</label>
-                        <input type="date" id="end_day" class="end_day form_input" name="end_day" min="2018-01-01" required>
+                        <input type="date" id="end_day" class="form_input date-valid" name="end_day">
                     </div>
                 </label>
             </div>
@@ -103,25 +103,27 @@
             <div class="right_side_content">
                 <div>
                     <a href="#">
-                        <p>მიმაგრებული ფაილის ნახვა</p>
+                        მიმაგრებული ფაილის ნახვა
                     </a>
                     <a href="#" target="_blank">
-                        <p>მიმაგრებული ლინკის ნახვა</p>
+                        მიმაგრებული ლინკის ნახვა
                     </a>
                 </div>
                 <div>
                     <a href="#">
-                        <p>მიმაგრებული ფაილის ნახვა</p>
+                        მიმაგრებული ფაილის ნახვა
                     </a>
                     <a href="#" target="_blank">
-                        <p>მიმაგრებული ლინკის ნახვა</p>
+                        მიმაგრებული ლინკის ნახვა
                     </a>
                 </div>
             </div>
-            <input class="send_btn" type="submit" value="გაგზავნა">
+            <input id="submit" class="send_btn" type="submit" value="გაგზავნა">
         </form>
     </div>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/jquery-validation@1.19.3/dist/jquery.validate.js"></script>
     <script src="./js/jquery.js"></script>
+    <script src="./js/validaition.js"></script>
 </body>
 </html>
