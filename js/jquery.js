@@ -1,11 +1,7 @@
 //Create bank
 
 $("#teacher_bank").on("click", function() {
-    if ($("form").hasClass("disnone")){
-        $('form').removeClass('disnone');
-    } else {
-        $('form').addClass('disnone');
-    }
+    $('form').removeClass('disnone');
 });
 
 
