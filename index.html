@@ -5,74 +5,18 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./css/main.min.css">
-    <title>Online Test</title>
+    <title>Registration</title>
 </head>
-<body class="teacher">
-    <h1>ლექტორის გვერდი</h1>
-    <button id="teacher_bank" class="btn">ბანკის შექმნა</button>
-    <form class="disnone">
-        <div>
-            <input type="text" name="testname" id="test_name" class="test-name-input" placeholder="ტესტის სახელის ველი">
-        </div>
-        <div>
-            <input type="text" name="username" id="name" class="form_input" placeholder="სახელი">
-        </div>
-        <div>
-            <input type="text" name="lname" id="lname" class="form_input" placeholder="გვარი">
-        </div>
-        <div>
-            <input type="number" name="number" id="id_number" class="form_input" placeholder="პირადი ნომერი">
-        </div>
-        <div>
-            <input type="email" name="email" id="email" class="form_input" placeholder="ელფოსტა">
-        </div>
-        <div>
-            <input type="number" name="mobnumber" id="mobile_number" class="form_input" placeholder="ტელეფონის ნომერი">
-        </div>
-        <!-- Additional questions -->
-        <div class="quest_container">
-            <h5 class="quest_title">დამატებითი კითხვები</h5>
-            <div class="main_form" action="/action_page.php">
-                <label for="qeust_checkbox" class="appear_checkbox">
-                    გამოჩნდეს
-                    <input type="checkbox" id="qeust_checkbox" name="questions">
-                </label>
-            </div>
-            <div id="quest_collapse" class="disnone">
-                <div class="quest_form" action="/action_page.php">
-                    <input type="text" name="work-exp" class="form_input workexp-valid" placeholder="სამუშაო გამოცდილება">
-                    <input type="text" name="org-name" class="form_input workexp-valid" placeholder="ორგანიზაციის სახელი">
-                    <input type="text" name="position" class="form_input workexp-valid" placeholder="თქვენი პოზიცია">
-                    <div>
-                        <input class="working_now checkbox" type="checkbox">
-                        მოცემულ მომეტში ვმუშაობ აღნიშნულ ორგანიზაციაში
-                        <div class="content-box">
-                            <label for="start_day">დაწყების თარიღი:</label>
-                            <input type="date" id="start_day" class="form_input date-valid" name="start_day">
-                        </div>
-                        <div class="end_date content-box">
-                            <label for="end_day">დასრულების თარიღი:</label>
-                            <input type="date" id="end_day" class="form_input date-valid" name="end_day">
-                        </div>
-                    </div>
-                </div> 
-            </div>
-        </div>
-        <div class="add_additional_question">
-            <input class="main_question" type="text" name="main_question-vell" placeholder="კითვის მთავარი ველი (text)">
-            <input class="answer_type" type="text"  name="ans-typ" placeholder="პასუხის ტიპის არჩევა">
-            <input class="answer" type="text" id="answer" name="answer" placeholder="პირველი პასუხის ველი">
-            <button class="add_answer btn">ახალი პასუხის ველის დამატება</button>
-            <input type="submit" value="del">
-            <input type="submit" value="req">
-        </div>
-        <button class="add_questions btn">
-            <img class="plus_icon" src="./img/icons/plus-solid.svg" alt="plus">
-        </button>
-    </form>
+<body>
+    <div class="register-container">
+        <form action="./student.html" id="auth-form">
+              <input class="reg-input" placeholder="ჩაწერე პირადი ნომერი" name="idnum" id="idnum" required>
+              <input id="sumbit" type="submit" class="registerbtn" value="Register">
+        </form>
+    </div>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/jquery-validation@1.19.3/dist/jquery.validate.js"></script>
-    <script src="./js/jquery.js"></script>
+    <script src="./js/auth.js"></script>
     <script src="./js/validaition.js"></script>
 </body>
 </html>
