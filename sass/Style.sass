@@ -19,14 +19,24 @@
 /*------------------------------------*\
   #Global
 /*------------------------------------*/
+//validation
+.error
+  color: red
+
+.valid
+  border: 1px solid green
 
 
 /*------------------------------------*\
   #Lecturer page
 /*------------------------------------*/
 
-.teacher
+.teacher, .student_form
   padding: 50px
+
+.content-box
+  label
+    display: block
 
 h1, h5, .appear_checkbox
   @include font-type(20px, san-serif, $text-color)
@@ -108,6 +118,9 @@ h1, h5, .appear_checkbox
     margin: 190px auto;
     display: block;
 
+.radio-box, .checkbox-box
+  display: block
+
 
 /*------------------------------------*\
   #Registration
@@ -124,6 +137,7 @@ h1, h5, .appear_checkbox
     transform: translate(-50%, -50%)
 
     .registerbtn, .reg-input
+      display: block
       margin: 10px
       width: 367px
       height: 65px
