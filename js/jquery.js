@@ -75,18 +75,16 @@ $('.add_work_experience').on('click', function() {
         <label for="position-'+ (work_experience) +'">თქვენი პოზიცია</label>\
         <input type="text" name="position-'+ (work_experience) +'" id="position-'+ (work_experience) +'" class="form_input workexp-valid">\
     </div>\
-    <div class="job_checkbox_label">\
-        <div>\
-            <input class="working_now checkbox" type="checkbox">\
-            მოცემულ მომეტში ვმუშაობ აღნიშნულ ორგანიზაციაში\
-            <div class="content-box">\
-                <label for="start_day_'+ (work_experience) +'">დაწყების თარიღი:</label>\
-                <input type="date" id="start_day_'+ (work_experience) +'" class="form_input date-valid" name="start_day'+ (work_experience) +'">\
-            </div>\
-            <div class="end_date content-box">\
-                <label for="end_day_'+ (work_experience) +'">დასრულების თარიღი:</label>\
-                <input type="date" id="end_day_'+ (work_experience) +'" class="form_input date-valid" name="end_day'+ (work_experience) +'">\
-            </div>\
+    <div>\
+        <input class="working_now checkbox" type="checkbox">\
+        მოცემულ მომეტში ვმუშაობ აღნიშნულ ორგანიზაციაში\
+        <div class="content-box">\
+            <label for="start_day_'+ (work_experience) +'">დაწყების თარიღი:</label>\
+            <input type="date" id="start_day_'+ (work_experience) +'" class="form_input date-valid" name="start_day'+ (work_experience) +'">\
+        </div>\
+        <div class="end_date content-box">\
+            <label for="end_day_'+ (work_experience) +'">დასრულების თარიღი:</label>\
+            <input type="date" id="end_day_'+ (work_experience) +'" class="form_input date-valid" name="end_day'+ (work_experience) +'">\
         </div>\
     </div>');
     work_experience++;
