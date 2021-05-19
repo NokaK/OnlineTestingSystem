@@ -1,4 +1,13 @@
+//Create bank
+
+$("#teacher_bank").on("click", function() {
+    $('form').removeClass('disnone');
+});
+
+
+
 // Collapse-Additional questions
+
 $("#qeust_checkbox").on("click", function() {
     if ($("#quest_collapse").hasClass("disnone")){
         $('#quest_collapse').removeClass('disnone');
@@ -8,76 +17,75 @@ $("#qeust_checkbox").on("click", function() {
 });
 
 
+
 // Completion Date
 
 //add and delete end date class
-$("#working_now").on("click", function() {
-    if ($("#end_date").hasClass("disnone")){
-        $('#end_date').removeClass('disnone');
+$("form").on('click', '.working_now', function() {
+    if ($(this).parent().find(".end_date").hasClass("disnone")){
+        $(this).parent().find(".end_date").removeClass('disnone');
     } else {
-        $('#end_date').addClass('disnone');
+        $(this).parent().find(".end_date").addClass('disnone');
     }
 });
 
-//date validation
-
-start_day.max = new Date(new Date().getTime() - new Date().getTimezoneOffset() * 60000).toISOString().split("T")[0];
-end_day.max = new Date(new Date().getTime() - new Date().getTimezoneOffset() * 60000).toISOString().split("T")[0];
-
-$("#start_day").on('change', function() {
-    if (start_day.value)
-    end_day.min = start_day.value;
-});
-$("#end_day").on('change', function() {
-    if (end_day.value)
-    start_day.max = end_day.value;
-});
 
 
 // Add additional questions
 
+var add_questions = 1;
 $('.add_questions').on('click', function() {
-    $('body').append('\
+    $('form').append('\
     <div class="add_additional_question">\
-        <input class="main_question" type="text" name="name" placeholder="კითვის მთავარი ველი (text)">\
-        <input class="answer_type" type="text"  name="name" placeholder="პასუხის ტიპის არჩევა">\
-        <input class="answer" type="text" name="name" placeholder="პირველი პასუხის ველი"><br>\
+        <input class="main_question" type="text" name="main_question-vell'+ (work_experience) +'" placeholder="კითვის მთავარი ველი (text)">\
+        <input class="answer_type" type="text"  name="ans-typ'+ (work_experience) +'" placeholder="პასუხის ტიპის არჩევა">\
+        <input class="answer" type="text" id="answer_'+ (work_experience) +'" name="answer_'+ (work_experience) +'" placeholder="პირველი პასუხის ველი"><br>\
         <button class="add_answer btn">ახალი პასუხის ველის დამატება</button>\
         <input type="submit" value="del">\
         <input type="submit" value="req">\
-    </div>')
+    </div>');
+    add_questions++;
 });
+
+
 
 // Add answer
 
-$("body").on('click', '.add_answer', function() {
-    /* Checks if this class is selected and has grid-row-selected class */
+$("form").on('click', '.add_answer', function() {
     $(this).before('<input class="answer" type="text" name="name" placeholder="პირველი პასუხის ველი"><br>')
 });
 
+
+
 // Add work Experience
+
+var work_experience = 1;
 $('.add_work_experience').on('click', function() {
+    //if you want to add a block above, write "$('#mob_num').after"
     $('.add_work_experience').before('\
-    <div>\
-        <label for="Work-experience">სამუშაო გამოცდილება</label><br>\
-        <input type="text" name="username" id="username" class="form_input" required>\
+    <div id="work-exp-cont-'+ (work_experience) +'" class="content-box">\
+        <label for="work-exp-'+ (work_experience) +'">სამუშაო გამოცდილება</label>\
+        <input type="text" name="work-exp-'+ (work_experience) +'" id="work-exp-'+ (work_experience) +'" class="form_input workexp-valid">\
+    </div>\
+    <div id="org-name_cont'+ (work_experience) +'" class="content-box">\
+        <label for="org-name-'+ (work_experience) +'">ორგანიზაციის სახელი</label>\
+        <input type="text" name="org-name-'+ (work_experience) +'" id="org-name'+ (work_experience) +'" class="form_input workexp-valid">\
+    </div>\
+    <div id="position-cont'+ (work_experience) +'" class="content-box">\
+        <label for="position-'+ (work_experience) +'">თქვენი პოზიცია</label>\
+        <input type="text" name="position-'+ (work_experience) +'" id="position-'+ (work_experience) +'" class="form_input workexp-valid">\
     </div>\
     <div>\
-        <label for="Org-name">ორგანიზაციის სახელი</label><br>\
-        <input type="text" name="username" id="username" class="form_input" required>\
-    </div>\
-    <div>\
-        <label for="pos">თქვენი პოზიცია</label><br>\
-        <input type="text" name="username" id="username" class="form_input" required>\
-    </div>\
-    <label class="job_checkbox_label">\
-        <input id="working_now" class="checkbox" type="checkbox">\
+        <input class="working_now checkbox" type="checkbox">\
         მოცემულ მომეტში ვმუშაობ აღნიშნულ ორგანიზაციაში\
-    </label>\
-    <label for="start">დაწყების თარიღი:</label><br>\
-    <input type="date" id="start_day" class="form_input" name="start_date" min="2018-01-01" required>\
-    <div id="end_date" class="">\
-        <label for="end">დასრულების თარიღი:</label><br>\
-        <input type="date" id="end_day" class="form_input" name="end_date" min="2018-01-01" required>\
-    </div>')
+        <div class="content-box">\
+            <label for="start_day_'+ (work_experience) +'">დაწყების თარიღი:</label>\
+            <input type="date" id="start_day_'+ (work_experience) +'" class="form_input date-valid" name="start_day'+ (work_experience) +'">\
+        </div>\
+        <div class="end_date content-box">\
+            <label for="end_day_'+ (work_experience) +'">დასრულების თარიღი:</label>\
+            <input type="date" id="end_day_'+ (work_experience) +'" class="form_input date-valid" name="end_day'+ (work_experience) +'">\
+        </div>\
+    </div>');
+    work_experience++;
 });
