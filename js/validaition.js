@@ -15,6 +15,17 @@ function(value, element, params) {
 // Auth validate
 
 $("#auth-form").validate({
+    submitHandler: function(form) {
+        form.submit();
+    },
+    // onfocusout: function(element) {
+    //     var $errorContainer = $(".focus-input100").siblings(".Ntooltip").find("label");
+    //     $errorContainer.removeClass("checked");
+    //     if ( !this.checkable(element)) {
+    //         this.element(element);
+    //     }
+    //     console.log(element);
+    // },
     rules: {
         errorClass:'error',
         idnum: {
@@ -31,7 +42,17 @@ $("#auth-form").validate({
             minlength: 'გთხოვთ შეიყვანოთ სწორი ID, თქვენს მიერ შეყვანილი ციფრი <em>ნაკლებია 11</em>',
             maxlength: 'გთხოვთ შეიყვანოთ სწორი ID, თქვენს მიერ შეყვანილი ციფრი <em>მეტია 11</em>'
         }
-    }
+    },
+    // errorPlacement: function(error, element) {
+    //     var container = $('<div />');
+    //     container.addClass('Ntooltip');
+    //     error.insertAfter(element);
+    //     error.wrap(container);
+    //     $("<div class='errorImage'></div>").insertAfter(error);
+    //   },
+    //   success: function(element) {
+    //     $(element).addClass("checked");
+    // }
 });
 
 

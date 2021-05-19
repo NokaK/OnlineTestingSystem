@@ -14,17 +14,81 @@
  */
 
 
-
-
 /*------------------------------------*\
   #Global
 /*------------------------------------*/
-//validation
-.error
-  color: red
 
-.valid
-  border: 1px solid green
+//validation
+// .error
+//   display: none
+//
+
+// .error-action
+//   display: block
+//   position: absolute
+//   color: #c80000
+//   height: 4px
+//   width: 4px
+//   border-radius: 100%
+//   top: 50%
+
+// .error-action:hover +  .error
+//   display: block
+
+
+div
+  .Ntooltip
+    position: absolute;
+    top: 50%;
+    right: 10px;
+    transform: translate(0%, -50%);
+
+
+div
+  .Ntooltip:hover 
+    z-index: 1005
+
+
+div
+  .Ntooltip
+    label
+      display: none !important
+      vertical-align: middle
+
+
+div
+  .Ntooltip:hover
+    .error:not(.checked)
+      display: inline-block !important
+      position: absolute
+      left: 2em
+      width:auto
+      padding: 5px
+      background-color: #ff6611
+      border: 3px coral solid
+      border-radius: 0.5em
+      color: white
+      opacity: 0.85
+
+
+
+.error
+  & + .errorImage
+    height: 15px
+    width: 15px
+    background-color: red
+    display: inline-block !important
+    vertical-align: middle
+
+
+
+.checked 
+  & + .errorImage 
+    height: 0
+    width: 0
+    display: inline-block !important
+    vertical-align: middle
+
 
 
 /*------------------------------------*\
@@ -46,11 +110,19 @@ h1, h5, .appear_checkbox
   padding: 15px 25px
   @include font-type(20px, san-serif, $text-color)
 
-.form_input, .job_checkbox_label
-  margin: 9px 0
+.form_input, .job_checkbox_label, .reg-input
+  border: none
   outline: none
-  width: 806px
-  padding: 12px 75px 25px 15px
+  padding-left: 15px;
+  height: 50px
+  border-radius: 25px
+  display: block
+  width: calc(100% - 15px);
+  background: #e6e6e6
+  font-family: Montserrat-Bold
+  font-size: 15px
+  line-height: 1.5
+  color: #666
   @include font-type(20px, san-serif, $text-color)
 
 .test-name-input
@@ -136,7 +208,7 @@ h1, h5, .appear_checkbox
     left: 50%
     transform: translate(-50%, -50%)
 
-    .registerbtn, .reg-input
+    .registerbtn
       display: block
       margin: 10px
       width: 367px
@@ -144,3 +216,73 @@ h1, h5, .appear_checkbox
       outline: none
       @include font-type(20px, san-serif, $text-color)
 
+
+
+
+
+
+
+.focus-input100
+  display: block
+  position: absolute
+  border-radius: 25px
+  bottom: 0
+  left: 0
+  z-index: -1
+  width: 100%
+  height: 100%
+  box-shadow: 0 0
+  color: rgba(132, 106, 221, 0.5)
+
+textarea:focus, input:focus
+  border-color: transparent !important
+
+.wrap
+  position: relative
+
+textarea
+  outline: none
+  border: none
+
+  &:focus
+    border-color: transparent !important
+
+input:focus
+  border-color: transparent !important
+
+
+.symbol-input100
+  display: -webkit-box
+  display: -webkit-flex
+  display: -moz-box
+  display: -ms-flexbox
+  display: flex
+  align-items: center
+  position: absolute
+  border-radius: 25px
+  bottom: 0
+  left: 0
+  width: 100%
+  height: 100%
+  padding-left: 30px
+  pointer-events: none
+  color: #aaa
+  font-size: 15px
+  -webkit-transition: all .4s
+  -o-transition: all .4s
+  -moz-transition: all .4s
+  transition: all .4s
+
+.input100:focus + .focus-input100 + .symbol-input100
+  color: #846add
+  padding-left: 22px
+
+
+@keyframes anim-shadow
+  to
+    box-shadow: 0 0 60px 25px
+    opacity: 0
+
+.input100:focus + .focus-input100
+  -webkit-animation: anim-shadow .5s ease-in-out forwards
+  animation: anim-shadow .5s ease-in-out forwards
