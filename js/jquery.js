@@ -1,7 +1,7 @@
 //Create bank
 
 $("#teacher_bank").on("click", function() {
-    $('form').removeClass('disnone');
+    $('form').removeClass('d-none');
 });
 
 
@@ -9,10 +9,10 @@ $("#teacher_bank").on("click", function() {
 // Collapse-Additional questions
 
 $("#qeust_checkbox").on("click", function() {
-    if ($("#quest_collapse").hasClass("disnone")){
-        $('#quest_collapse').removeClass('disnone');
+    if ($("#quest_collapse").hasClass("d-none")){
+        $('#quest_collapse').removeClass('d-none');
     } else {
-        $('#quest_collapse').addClass('disnone');
+        $('#quest_collapse').addClass('d-none');
     }
 });
 
@@ -22,10 +22,10 @@ $("#qeust_checkbox").on("click", function() {
 
 //add and delete end date class
 $("form").on('click', '.working_now', function() {
-    if ($(this).parent().find(".end_date").hasClass("disnone")){
-        $(this).parent().find(".end_date").removeClass('disnone');
+    if ($(this).parent().find(".end_date").hasClass("d-none")){
+        $(this).parent().find(".end_date").removeClass('d-none');
     } else {
-        $(this).parent().find(".end_date").addClass('disnone');
+        $(this).parent().find(".end_date").addClass('d-none');
     }
 });
 
