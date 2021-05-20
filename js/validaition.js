@@ -18,14 +18,14 @@ $("#auth-form").validate({
     submitHandler: function(form) {
         form.submit();
     },
-    // onfocusout: function(element) {
-    //     var $errorContainer = $(".focus-input100").siblings(".Ntooltip").find("label");
-    //     $errorContainer.removeClass("checked");
-    //     if ( !this.checkable(element)) {
-    //         this.element(element);
-    //     }
-    //     console.log(element);
-    // },
+    onfocusout: function(element) {
+        var $errorContainer = $(".reg-input").siblings(".Ntooltip").find("label");
+        $errorContainer.removeClass("checked");
+        if ( !this.checkable(element)) {
+            this.element(element);
+        }
+        console.log(element);
+    },
     rules: {
         errorClass:'error',
         idnum: {
@@ -43,16 +43,16 @@ $("#auth-form").validate({
             maxlength: 'გთხოვთ შეიყვანოთ სწორი ID, თქვენს მიერ შეყვანილი ციფრი <em>მეტია 11</em>'
         }
     },
-    // errorPlacement: function(error, element) {
-    //     var container = $('<div />');
-    //     container.addClass('Ntooltip');
-    //     error.insertAfter(element);
-    //     error.wrap(container);
-    //     $("<div class='errorImage'></div>").insertAfter(error);
-    //   },
-    //   success: function(element) {
-    //     $(element).addClass("checked");
-    // }
+    errorPlacement: function(error, element) {
+        var container = $('<div />');
+        container.addClass('Ntooltip');
+        error.insertAfter(element);
+        error.wrap(container);
+        $("<div class='errorImage'></div>").insertAfter(error);
+      },
+      success: function(element) {
+        $(element).addClass("checked");
+    }
 });
 
 
@@ -60,6 +60,17 @@ $("#auth-form").validate({
 // Form validate
 
 $("form").validate({
+    submitHandler: function(form) {
+        form.submit();
+    },
+    onfocusout: function(element) {
+        var $errorContainer = $(".reg-input").siblings(".Ntooltip").find("label");
+        $errorContainer.removeClass("checked");
+        if ( !this.checkable(element)) {
+            this.element(element);
+        }
+        console.log(element);
+    },
     rules: {
         errorClass:'error',
         testname: {
@@ -124,6 +135,16 @@ $("form").validate({
         start_day: {
             required: 'გთხოვთ შეავსოთ ველი'
         }
+    },
+    errorPlacement: function(error, element) {
+        var container = $('<div />');
+        container.addClass('Ntooltip');
+        error.insertAfter(element);
+        error.wrap(container);
+        $("<div class='errorImage'></div>").insertAfter(error);
+      },
+      success: function(element) {
+        $(element).addClass("checked");
     }
 });
 
