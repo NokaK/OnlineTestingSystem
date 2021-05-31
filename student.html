@@ -27,7 +27,7 @@
             <div id="id_num" class="content-box">
                 <label for="number">პირადი ნომერი</label>
                 <div class="input-cont">
-                    <input type="number" name="number" id="number" class="form_input input-animation num-input">
+                    <input type="number" name="number" id="number" class="form_input input-animation">
                 </div>
             </div>
             <div id="email" class="content-box">
@@ -39,7 +39,7 @@
             <div id="mob_num" class="content-box">
                 <label for="mnumber">ტელეფონის ნომერი</label>
                 <div class="input-cont">
-                    <input type="number" name="mobnumber" id="mnumber" class="form_input input-animation num-input">
+                    <input type="number" name="mobnumber" id="mnumber" class="form_input input-animation">
                 </div>
             </div>
             <div id="work_exp_cont" class="content-box">
@@ -138,7 +138,12 @@
                 </div>
                 </div>
             </div>
-            <input type="file" id="img" name="img" accept="image/*">
+            <div class="upload-options">
+                <img src="./img/icons/plus-solid.svg" alt="plus">
+                <label>
+                    <input type="file" class="image-upload" accept="image/*" />
+                </label>
+            </div>
             <input id="submit" class="send_btn" type="submit" value="გაგზავნა">
         </form>
     </div>

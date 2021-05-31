@@ -69,10 +69,6 @@ div
     display: inline-block !important
     vertical-align: middle
 
-.num-input
-  cursor: pointer  
-  caret-color: transparent
-
 /*------------------------------------*\
   #Lecturer page
 /*------------------------------------*/
@@ -210,3 +206,11 @@ h1, h5, .appear_checkbox
 
 .input-animation:focus
   animation: anim-shadow .5s
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button 
+  -webkit-appearance: none
+  margin: 0
+
+input[type=number]
+  -moz-appearance: textfield
