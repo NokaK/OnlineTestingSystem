@@ -1,0 +1,41 @@
+/*------------------------------------*\
+ # Mixins
+/*------------------------------------*/
+@mixin flex($justify: center, $align: center, $direct: row)
+  display: flex
+  justify-content: $justify
+  align-items: $align
+  flex-direction: $direct
+
+@mixin flexh($justify: center, $align: start, $direct: row)
+  display: flex
+  justify-content: $justify
+  align-items: $align
+  flex-direction: $direct
+
+@mixin flexv($justify: start, $align: center, $direct: row)
+  display: flex
+  justify-content: $justify
+  align-items: $align
+  flex-direction: $direct
+
+@mixin flexc($justify: center, $align: center, $direct: column)
+  display: flex
+  justify-content: $justify
+  align-items: $align
+  flex-direction: $direct
+
+@mixin font($s, $f, $c)
+  font-size: $s
+  font-family: $f
+  color: $c
+
+@mixin btn($w)
+  width: $w
+  height: 50px
+  border-radius: 25px
+  background: $main-color
+  @include font(15px, serif, #fff)
+  line-height: 1.5
+  border: none
+  outline: none

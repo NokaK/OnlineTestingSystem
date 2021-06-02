@@ -9,10 +9,10 @@
 </head>
 <body class="teacher">
     <h1>ლექტორის გვერდი</h1>
-    <button id="teacher_bank" class="btn">ბანკის შექმნა</button>
-    <form action="./send.html" class="d-none">
+    <button id="teacher_bank" class="create-bank">ბანკის შექმნა</button>
+    <form action="./send.html" class="teacher-form d-none">
         <div class="input-cont">
-            <input type="text" name="testname" id="test_name" class="test-name-input input-animation" placeholder="ტესტის სახელის ველი">
+            <input type="text" name="testname" id="test_name" class="form_input input-animation" placeholder="ტესტის სახელის ველი">
         </div>
         <div class="input-cont">
             <input type="text" name="username" id="name" class="form_input input-animation" placeholder="სახელი">
@@ -21,13 +21,13 @@
             <input type="text" name="lname" id="lname" class="form_input input-animation" placeholder="გვარი">
         </div>
         <div class="input-cont">
-            <input type="number" name="number" id="id_number" class="form_input input-animation num-input" placeholder="პირადი ნომერი">
+            <input type="number" name="number" id="id_number" class="form_input input-animation" placeholder="პირადი ნომერი">
         </div>
         <div class="input-cont">
             <input type="email" name="email" id="email" class="form_input input-animation" placeholder="ელფოსტა">
         </div>
         <div class="input-cont">
-            <input type="number" name="mobnumber" id="mobile_number" class="form_input input-animation num-input" placeholder="ტელეფონის ნომერი">
+            <input type="number" name="mobnumber" id="mobile_number" class="form_input input-animation" placeholder="ტელეფონის ნომერი">
         </div>
         <!-- Additional questions -->
         <div class="quest_container">
@@ -72,11 +72,11 @@
             <input class="main_question" type="text" name="main_question-vell" placeholder="კითვის მთავარი ველი (text)">
             <input class="answer_type" type="text"  name="ans-typ" placeholder="პასუხის ტიპის არჩევა">
             <input class="answer" type="text" id="answer" name="answer" placeholder="პირველი პასუხის ველი">
-            <button class="add_answer btn">ახალი პასუხის ველის დამატება</button>
+            <button class="add_answer">ახალი პასუხის ველის დამატება</button>
             <input type="submit" value="del">
             <input type="submit" value="req">
         </div>
-        <button class="add_questions btn">
+        <button class="add_questions">
             <img class="plus_icon" src="./img/icons/plus-solid.svg" alt="plus">
         </button>
         <input id="submit" class="send_btn" type="submit" value="გაგზავნა">
