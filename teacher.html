@@ -9,10 +9,10 @@
 </head>
 <body class="teacher">
     <h1>ლექტორის გვერდი</h1>
-    <button id="teacher_bank" class="btn">ბანკის შექმნა</button>
-    <form action="./send.html" class="d-none">
+    <button id="teacher_bank" class="create-bank">ბანკის შექმნა</button>
+    <form action="./send.html" class="teacher-form d-none">
         <div class="input-cont">
-            <input type="text" name="testname" id="test_name" class="test-name-input input-animation" placeholder="ტესტის სახელის ველი">
+            <input type="text" name="testname" id="test_name" class="form_input input-animation" placeholder="ტესტის სახელის ველი">
         </div>
         <div class="input-cont">
             <input type="text" name="username" id="name" class="form_input input-animation" placeholder="სახელი">
@@ -72,11 +72,11 @@
             <input class="main_question" type="text" name="main_question-vell" placeholder="კითვის მთავარი ველი (text)">
             <input class="answer_type" type="text"  name="ans-typ" placeholder="პასუხის ტიპის არჩევა">
             <input class="answer" type="text" id="answer" name="answer" placeholder="პირველი პასუხის ველი">
-            <button class="add_answer btn">ახალი პასუხის ველის დამატება</button>
+            <button class="add_answer">ახალი პასუხის ველის დამატება</button>
             <input type="submit" value="del">
             <input type="submit" value="req">
         </div>
-        <button class="add_questions btn">
+        <button class="add_questions">
             <img class="plus_icon" src="./img/icons/plus-solid.svg" alt="plus">
         </button>
         <input id="submit" class="send_btn" type="submit" value="გაგზავნა">
