@@ -2,6 +2,7 @@
 
 $("#teacher_bank").on("click", function() {
     $('form').removeClass('d-none');
+    $(this).addClass('d-none');
 });
 
 
