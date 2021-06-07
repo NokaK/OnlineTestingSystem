@@ -36,12 +36,12 @@ $("form").on('change', '.working-now', function() {
 
 var add_questions = 1;
 $('.add_questions').on('click', function() {
-    $('form').append('\
+    $(this).before('\
     <div class="add_additional_question">\
-        <input class="main_question" type="text" name="main_question-vell'+ (work_experience) +'" placeholder="კითვის მთავარი ველი (text)">\
-        <input class="answer_type" type="text"  name="ans-typ'+ (work_experience) +'" placeholder="პასუხის ტიპის არჩევა">\
-        <input class="answer" type="text" id="answer_'+ (work_experience) +'" name="answer_'+ (work_experience) +'" placeholder="პირველი პასუხის ველი"><br>\
-        <button class="add_answer btn">ახალი პასუხის ველის დამატება</button>\
+        <input class="main-question input-animation " type="text" name="main_question-vell" placeholder="კითვის მთავარი ველი (text)">\
+        <input class="answer-type input-animation " type="text"  name="ans-typ" placeholder="პასუხის ტიპის არჩევა">\
+        <input class="answer input-animation " type="text" id="answer" name="answer" placeholder="პირველი პასუხის ველი">\
+        <button class="add__answer">ახალი პასუხის ველის დამატება</button>\
         <input type="submit" value="del">\
         <input type="submit" value="req">\
     </div>');
@@ -52,7 +52,7 @@ $('.add_questions').on('click', function() {
 
 // Add answer
 
-$("form").on('click', '.add_answer', function() {
+$("form").on('click', '.add__answer', function() {
     $(this).before('<input class="answer" type="text" name="name" placeholder="პირველი პასუხის ველი"><br>')
 });
 
