@@ -7,9 +7,6 @@
  *
  * Student page.............   [Descr]
  *
- * REGISTRATION
- * Authorization............  [Desct]
- * Registration............   [Descr]
  * Send form............   [Descr]
  *
  */
@@ -85,7 +82,7 @@ div
     display: block
 
 h1, h5, .appear_checkbox
-  @include font(20px, san-serif, $text-color)
+  @include font(20px, 'm-r', $text-color)
 
 .form_input, .job_checkbox_label, .reg-input
   padding-left: 15px
@@ -96,7 +93,7 @@ h1, h5, .appear_checkbox
   background: #e6e6e6
   line-height: 1.5
   color: #666
-  @include font(16px, Montserrat-Bold, $text-color)
+  @include font(16px, 'm-b', $text-color)
 
 /*Additional questions*/
 .quest_container
@@ -142,7 +139,7 @@ h1, h5, .appear_checkbox
   background: #e6e6e6
   line-height: 1.5
   color: #666
-  @include font(16px, Montserrat-Bold, $text-color)
+  @include font(16px, 'm-b', $text-color)
 
 /*------------------------------------*\
  #Student page
@@ -160,30 +157,15 @@ h1, h5, .appear_checkbox
   margin: 20px 0
   @include btn(100%)
 
-.radio-box, .checkbox-box
-  display: block
-
 .choices__inner
   margin-top: 30px
 
-/*------------------------------------*\
- #Registration
-/*------------------------------------*/
-.register-container
-  position: relative
-  width: 100vw
-  height: 100vh
+.right_side_content
+  width: 500px
 
-  form
-    position: absolute
-    top: 50%
-    left: 50%
-    transform: translate(-50%, -50%)
-
-    .registerbtn
-      margin-top: 20px
-      display: block
-      @include btn(100%)
+  div 
+    margin-top: 20px
+    @include flex($justify: space-between)
 
 /*------------------------------------*\
  #Send Form
