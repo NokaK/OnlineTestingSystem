@@ -22,7 +22,7 @@ $("#qeust_checkbox").on("click", function() {
 // Completion Date
 
 //add and delete end date class
-$("form").on('click', '.working_now', function() {
+$("form").on('change', '.working-now', function() {
     if ($(this).parent().find(".end_date").hasClass("d-none")){
         $(this).parent().find(".end_date").removeClass('d-none');
     } else {
@@ -82,9 +82,11 @@ $('.add_work_experience').on('click', function() {
             <input type="text" name="position-'+ (work_experience) +'" id="position-'+ (work_experience) +'" class="form_input workexp-valid input-animation">\
         </div>\
     </div>\
-    <div>\
-        <input class="working_now checkbox" type="checkbox">\
-        მოცემულ მომეტში ვმუშაობ აღნიშნულ ორგანიზაციაში\
+    <div class="content-box">\
+        <label class="working-now" for="work-now'+ (work_experience) +'">\
+            <input id="work-now'+ (work_experience) +'" class="checkbox" type="checkbox">\
+            მოცემულ მომეტში ვმუშაობ აღნიშნულ ორგანიზაციაში\
+        </label>\
         <div class="content-box">\
             <label for="start_day_'+ (work_experience) +'">დაწყების თარიღი:</label>\
             <div class="input-cont">\
@@ -99,4 +101,15 @@ $('.add_work_experience').on('click', function() {
         </div>\
     </div>');
     work_experience++;
+});
+
+
+// Multi select   
+
+$(document).ready(function(){
+    var multipleCancelButton = new Choices('#choices-multiple-remove-button', {
+    removeItemButton: true,
+    searchResultLimit:5,
+    renderChoiceLimit:5
+    });
 });

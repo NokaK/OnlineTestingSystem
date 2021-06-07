@@ -3,7 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"><link rel="stylesheet" href="https://res.cloudinary.com/dxfq3iotg/raw/upload/v1569006288/BBBootstrap/choices.min.css?version=7.0.0">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
     <link rel="stylesheet" href="./css/main.min.css">
     <title>Online Test</title>
 </head>
@@ -60,9 +61,11 @@
                     <input type="text" name="position" id="position" class="form_input workexp-valid input-animation">
                 </div>
             </div>
-            <div>
-                <input class="working_now checkbox" type="checkbox">
-                მოცემულ მომეტში ვმუშაობ აღნიშნულ ორგანიზაციაში
+            <div class="content-box">
+                <label class="working-now" for="work-now">
+                    <input id="work-now" class="checkbox" type="checkbox">
+                    მოცემულ მომეტში ვმუშაობ აღნიშნულ ორგანიზაციაში
+                </label>
                 <div class="content-box">
                     <label for="start_day">დაწყების თარიღი:</label>
                     <div class="input-cont">
@@ -138,6 +141,14 @@
                 </div>
                 </div>
             </div>
+            <select id="choices-multiple-remove-button" placeholder="აირჩიეთ" multiple>
+                <option value="1" onclick="filterSelection('Author')">1</option>
+                <option value="2">2</option>
+                <option value="3" >3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+                <option value="6">6</option>
+            </select>
             <div class="upload-options">
                 <img src="./img/icons/plus-solid.svg" alt="plus">
                 <label>
@@ -147,6 +158,8 @@
             <input id="submit" class="send_btn" type="submit" value="გაგზავნა">
         </form>
     </div>
+    <script src="https://res.cloudinary.com/dxfq3iotg/raw/upload/v1569006273/BBBootstrap/choices.min.js?version=7.0.0"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/jquery-validation@1.19.3/dist/jquery.validate.js"></script>
     <script src="./js/jquery.js"></script>
