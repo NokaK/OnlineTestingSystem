@@ -1,4 +1,4 @@
-ონლაინ ტესტების სისტემის ჩაშენება UniLab-ის მართვის აპლიკაციაში
+Online Testing System
 
 Branch Structure 
 
