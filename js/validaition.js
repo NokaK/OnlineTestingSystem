@@ -24,7 +24,6 @@ $("#auth-form").validate({
         if ( !this.checkable(element)) {
             this.element(element);
         }
-        console.log(element);
     },
     rules: {
         errorClass:'error',
@@ -69,7 +68,6 @@ $("form").validate({
         if ( !this.checkable(element)) {
             this.element(element);
         }
-        console.log(element);
     },
     rules: {
         errorClass:'error',

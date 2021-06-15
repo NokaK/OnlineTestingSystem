@@ -22,7 +22,7 @@ $("#qeust_checkbox").on("click", function() {
 // Completion Date
 
 //add and delete end date class
-$("form").on('click', '.working_now', function() {
+$("form").on('change', '.working-now', function() {
     if ($(this).parent().find(".end_date").hasClass("d-none")){
         $(this).parent().find(".end_date").removeClass('d-none');
     } else {
@@ -36,12 +36,12 @@ $("form").on('click', '.working_now', function() {
 
 var add_questions = 1;
 $('.add_questions').on('click', function() {
-    $('form').append('\
+    $(this).before('\
     <div class="add_additional_question">\
-        <input class="main_question" type="text" name="main_question-vell'+ (work_experience) +'" placeholder="კითვის მთავარი ველი (text)">\
-        <input class="answer_type" type="text"  name="ans-typ'+ (work_experience) +'" placeholder="პასუხის ტიპის არჩევა">\
-        <input class="answer" type="text" id="answer_'+ (work_experience) +'" name="answer_'+ (work_experience) +'" placeholder="პირველი პასუხის ველი"><br>\
-        <button class="add_answer btn">ახალი პასუხის ველის დამატება</button>\
+        <input class="main-question input-animation " type="text" name="main_question-vell" placeholder="კითვის მთავარი ველი (text)">\
+        <input class="answer-type input-animation " type="text"  name="ans-typ" placeholder="პასუხის ტიპის არჩევა">\
+        <input class="answer input-animation " type="text" id="answer" name="answer" placeholder="პირველი პასუხის ველი">\
+        <button class="add__answer">ახალი პასუხის ველის დამატება</button>\
         <input type="submit" value="del">\
         <input type="submit" value="req">\
     </div>');
@@ -52,7 +52,7 @@ $('.add_questions').on('click', function() {
 
 // Add answer
 
-$("form").on('click', '.add_answer', function() {
+$("form").on('click', '.add__answer', function() {
     $(this).before('<input class="answer" type="text" name="name" placeholder="პირველი პასუხის ველი"><br>')
 });
 
@@ -82,9 +82,11 @@ $('.add_work_experience').on('click', function() {
             <input type="text" name="position-'+ (work_experience) +'" id="position-'+ (work_experience) +'" class="form_input workexp-valid input-animation">\
         </div>\
     </div>\
-    <div>\
-        <input class="working_now checkbox" type="checkbox">\
-        მოცემულ მომეტში ვმუშაობ აღნიშნულ ორგანიზაციაში\
+    <div class="content-box">\
+        <label class="working-now" for="work-now'+ (work_experience) +'">\
+            <input id="work-now'+ (work_experience) +'" class="checkbox" type="checkbox">\
+            მოცემულ მომეტში ვმუშაობ აღნიშნულ ორგანიზაციაში\
+        </label>\
         <div class="content-box">\
             <label for="start_day_'+ (work_experience) +'">დაწყების თარიღი:</label>\
             <div class="input-cont">\
@@ -99,4 +101,15 @@ $('.add_work_experience').on('click', function() {
         </div>\
     </div>');
     work_experience++;
+});
+
+
+// Multi select   
+
+$(document).ready(function(){
+    var multipleCancelButton = new Choices('#choices-multiple-remove-button', {
+    removeItemButton: true,
+    searchResultLimit:5,
+    renderChoiceLimit:5
+    });
 });
