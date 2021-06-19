@@ -134,5 +134,5 @@ $("#textar").each(function () {
 
 $('#file').change(function () {
     let file = $('#file')[0].files[0].name;
-    $(this).parent().parent().next().find('.txt-file-name').text(file);
+    $('.txt-file-name').text(file);
 }); 
