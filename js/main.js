@@ -118,9 +118,21 @@ $(document).ready(function(){
 //------------------------\\
         //Textarea\\
 //------------------------\\
+
 $("#textar").each(function () {
     this.setAttribute("style", "height:" + (this.scrollHeight) + "px;overflow-y:hidden;");
   }).on("input", function () {
     this.style.height = "auto";
     this.style.height = (this.scrollHeight) + "px";
 });
+
+
+
+//------------------------\\
+        //File input\\
+//------------------------\\
+
+$('#file').change(function () {
+    let file = $('#file')[0].files[0].name;
+    $(this).parent().parent().next().find('.txt-file-name').text(file);
+}); 

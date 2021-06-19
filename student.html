@@ -155,8 +155,11 @@
             <div class="upload-options">
                 <img src="./img/icons/plus-solid.svg" alt="plus">
                 <label>
-                    <input type="file" class="image-upload" accept="image/*" />
+                    <input type="file" id="file" class="image-upload" accept="image/*, video/*, audio/*, .doc,.docx,.xml,application/msword,application/vnd.openxmlformats-officedocument.wordprocessingml.document" />
                 </label>
+            </div>
+            <div class="file-cont">
+                <p class="txt-file-name"></p>
             </div>
             <input id="submit" class="send_btn" type="submit" value="გაგზავნა">
         </form>
