@@ -85,13 +85,12 @@
             </div>
             <div class="content-box">
                 <label for="textar">ტექტუალური კითხვა</label>
-                <textarea class="form_input input-animation" id="textar">
-                </textarea>
+                <textarea class="form_input input-animation" id="textar"></textarea>
             </div>
             <div class="form-footer">
                 <div class="left_side_content">
-                <div>
-                    <p>ერთ ერთ სწორი პასუხი</p>
+                <div class="content-box">
+                    <p class="p-mg-size">ერთ ერთ სწორი პასუხი</p>
                     <div class="radio-box">
                         <label for="yes" class="container">
                             <input type="radio" name="l" id="yes" value="yes">კი
@@ -105,8 +104,8 @@
                         </label>
                     </div>
                 </div>
-                <div>
-                    <p>ერთ ერთ სწორი პასუხი</p>
+                <div class="content-box">
+                    <p class="p-mg-size">ერთ ერთ სწორი პასუხი</p>
                     <label for="check-box-1" class="container">
                         <input type="checkbox" name="11" id="check-box-1" value="ans1">1
                         <span class="checkmark"></span>
@@ -156,8 +155,11 @@
             <div class="upload-options">
                 <img src="./img/icons/plus-solid.svg" alt="plus">
                 <label>
-                    <input type="file" class="image-upload" accept="image/*" />
+                    <input type="file" id="file" class="image-upload" accept="image/*, video/*, audio/*, .doc,.docx,.xml,application/msword,application/vnd.openxmlformats-officedocument.wordprocessingml.document" />
                 </label>
+            </div>
+            <div class="file-cont">
+                <p class="txt-file-name"></p>
             </div>
             <input id="submit" class="send_btn" type="submit" value="გაგზავნა">
         </form>
@@ -165,7 +167,7 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <script src="https://res.cloudinary.com/dxfq3iotg/raw/upload/v1569006273/BBBootstrap/choices.min.js?version=7.0.0"></script>
     <script src="https://cdn.jsdelivr.net/npm/jquery-validation@1.19.3/dist/jquery.validate.js"></script>
-    <script src="./js/jquery.js"></script>
+    <script src="./js/main.js"></script>
     <script src="./js/validaition.js"></script>
 </body>
 </html>
